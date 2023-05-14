@@ -11,11 +11,8 @@ class BookDataset:
     def __getitem__(self, item):
         try:
             user_id = self.user_ids[item]
-            print('user done')
             isbn = self.isbns[item]
-            print('isbn done')
             rating = self.ratings[item]
-            print('rating done')
         except IndexError:
             print(f"IndexError: Invalid index '{item}'")
             return None
