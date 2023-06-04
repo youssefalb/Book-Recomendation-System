@@ -1,5 +1,5 @@
 import torch
-class BookDataset:
+class MyDataset:
     def __init__(self, user_ids, isbns, ratings):
         self.user_ids = user_ids
         self.isbns = isbns
