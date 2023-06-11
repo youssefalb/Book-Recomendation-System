@@ -3,7 +3,7 @@ import torch.nn as nn
 
 class Recommender(torch.nn.Module):
     def __init__(self, num_users, num_isbns, embedding_dim):
-        super(BookRecommender, self).__init__()
+        super(Recommender, self).__init__()
         self.user_embedding = torch.nn.Embedding(num_embeddings=num_users, embedding_dim=embedding_dim)
         self.isbn_embedding = torch.nn.Embedding(num_embeddings=num_isbns, embedding_dim=embedding_dim)
         self.fc1 = torch.nn.Linear(embedding_dim * 2, 64)
